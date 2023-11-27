@@ -13,11 +13,7 @@ export default defineNuxtConfig({
           path: '/post/:id',
           file: resolve(__dirname, './pages/post/Index.vue'),
         });
-        pages.push({
-          name: 'comments',
-          path: '/comments',
-          file: resolve(__dirname, './pages/comments/Index.vue'),
-        });
+       
     }
   },
  
