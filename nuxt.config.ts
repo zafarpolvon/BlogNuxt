@@ -29,6 +29,11 @@ export default defineNuxtConfig({
       apiBase: '/api'
     }
   },
+  build: {
+    rollupOptions: {
+      external: ['/home/runner/work/BlogNuxt/BlogNuxt/pages/comments/Index.vue?macro=true']
+    }
+  }
   
   
  
