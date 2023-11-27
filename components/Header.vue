@@ -13,9 +13,9 @@
             </NuxtLink>
           </li>
           <li>
-            <!-- <NuxtLink to="/comments" class="comments_link">
+            <NuxtLink to="/comments" class="comments_link">
               Comments
-            </NuxtLink> -->
+            </NuxtLink>
           </li>
         </ul>
       </div>
