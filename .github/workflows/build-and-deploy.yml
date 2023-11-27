@@ -34,6 +34,6 @@ jobs:
         CI: true  # Use the CI environment variable
 
     - name: Deploy to GitHub Pages
-      uses: zafarpolvon/BlogNuxt
+      uses: peaceiris/actions-gh-pages@v3
       with:
         folder: dist
