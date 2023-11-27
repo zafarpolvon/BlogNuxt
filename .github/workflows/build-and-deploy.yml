@@ -15,12 +15,17 @@ jobs:
       with:
         node-version: '14'  # Adjust the Node.js version as needed
 
-    - name: Install Dependencies and Build
+    - name: Install Dependencies
       run: |
         npm ci
-        npm run generate
       env:
-        NUXT_APP_BASE_URL: ${{ secrets.NUXT_APP_BASE_URL }}  # Use a GitHub secret for sensitive information
+        CI: true  # Use the CI environment variable
+
+    - name: Build
+      run: |
+        npm run build
+      env:
+        CI: true  # Use the CI environment variable
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
