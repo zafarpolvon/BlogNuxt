@@ -30,8 +30,17 @@ export default defineNuxtConfig({
     }
   },
   app: {
-    baseURL: '/nuxt-github-pages/', // baseURL: '/<repository>/'
-    buildAssetsDir: 'assets', // don't use "_" at the begining of the folder name to avoids nojkill conflict
+    baseURL: '/nuxt-github-pages/', 
+    buildAssetsDir: 'assets', 
+  },
+  build: {
+    viteOptions: {
+      build: {
+        rollupOptions: {
+          external: ['/home/runner/work/BlogNuxt/BlogNuxt/pages/comments/Index.vue?macro=true']
+        }
+      }
+    }
   }
  
 })
