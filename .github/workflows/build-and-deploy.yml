@@ -17,19 +17,15 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        npm install
+        yarn install
       env:
         CI: true  # Use the CI environment variable
 
-    - name: Install vue-observe-visibility
-      run: |
-        npm install vue-observe-visibility
-      env:
-        CI: true  # Use the CI environment variable
+    
 
     - name: Build
       run: |
-        npm run build
+        yarn build
       env:
         CI: true  # Use the CI environment variable
 
