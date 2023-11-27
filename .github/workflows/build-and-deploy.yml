@@ -1,10 +1,8 @@
 name: Build and Deploy
-
 on:
   push:
     branches:
       - master
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -23,15 +21,14 @@ jobs:
       env:
         CI: true  # Use the CI environment variable
 
+    
+
     - name: Build
       run: |
-        yarn build --verbose
+        yarn build
       env:
         CI: true  # Use the CI environment variable
 
-    - name: Display Build Logs
-        run: cat /home/runner/work/BlogNuxt/BlogNuxt/.nuxt/analyze/.vite-inspect/*
-      
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
